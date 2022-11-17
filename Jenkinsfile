@@ -45,6 +45,7 @@ pipeline {
 
         stage('Deployment'){
             steps {
+                sh "docker images"
                 sh "docker-compose up -d"
             }
             
