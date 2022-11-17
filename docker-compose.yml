@@ -5,10 +5,10 @@ services:
         image: komkrit/demo-devops:latest
         ports:
             - "3000:3000"
-        environment:
-            - MONGODB_ADDON_URI=mongodb://mongodb:27017/test
-    mongodb:
-        image: mongo:latest
-        ports: 
-            - "27017:27017"
+#        environment:
+#            - MONGODB_ADDON_URI=mongodb://mongodb:27017/test
+#    mongodb:
+#        image: mongo:latest
+#        ports: 
+#            - "27017:27017"
         
