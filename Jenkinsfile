@@ -33,11 +33,12 @@ pipeline {
         stage('Build docker image') {
             steps {
                 script {
-                    docker.withRegistry('', 'dockerhub') {
-                        def slackImage = docker.build("${env.image}:${BUILD_NUMBER}")
-                        slackImage.push()
-                        slackImage.push('latest')
-                    }
+                    // docker.withRegistry('', 'dockerhub') {
+                       // def slackImage = docker.build("${env.image}:${BUILD_NUMBER}")
+                        // slackImage.push()
+                        // slackImage.push('latest')
+                    // }
+                    sh "docker build -d komkrit/demo-devops:latest ."
                 }
             }
         }
