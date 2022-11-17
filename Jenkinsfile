@@ -38,7 +38,7 @@ pipeline {
                         // slackImage.push()
                         // slackImage.push('latest')
                     // }
-                    sh "docker build -d komkrit/demo-devops:latest ."
+                    sh "docker build -t komkrit/demo-devops:latest ."
                 }
             }
         }
